@@ -11,8 +11,6 @@ const getModels = async () => {
 getModels().then((models) => {
   const list=models.data
   console.log("list:",list);
-  const hello=list.map(i=>i.name)
+  const hello=list.map(i=>[i.name,i?.hugging_face_id || "not there"])
   console.log(hello)
 });
-// console.log(data)
-// const list=data.map((i)=>i)
